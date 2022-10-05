@@ -1,23 +1,32 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomeView from "../views/Home.vue";
+import HomePage from "../views/HomePage.vue";
+import AdminDashboard from "../views/AdminDashboard.vue";
+import InterviewerDashboard from "../views/InterviewerDashboard.vue";
+import CandidateDashboard from "../views/CandidateDashboard.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: HomeView,
+    name: "HomePage",
+    component: HomePage,
   },
   {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/admin-dashboard",
+    name: "AdminDashboard",
+    component: AdminDashboard,
+  },
+  {
+    path: "/interviewer-dashboard",
+    name: "InterviewerDashboard",
+    component: InterviewerDashboard,
+  },
+  {
+    path: "/candidate-dashboard",
+    name: "CandidateDashboard",
+    component: CandidateDashboard,
   },
 ];
 
